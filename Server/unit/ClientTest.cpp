@@ -3,13 +3,13 @@
 
 class ClientTest: public ::testing::Test {
 protected:
-    bool serverRunning = true;
+    bool serverRunning = false;
     Network::Client *client1, *client2, *client3;
 
     void SetUp() override {
-        client1 = new Network::Client(1337, serverRunning);
-        client2 = new Network::Client(69, serverRunning);
-        client3 = new Network::Client(420, serverRunning);
+        client1 = new Network::Client(1337, serverRunning, [](id_t) {});
+        client2 = new Network::Client(69, serverRunning, [](id_t) {});
+        client3 = new Network::Client(420, serverRunning, [](id_t) {});
     }
 };
 

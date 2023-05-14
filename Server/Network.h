@@ -6,6 +6,7 @@
 #include <memory>
 #include <stack>
 #include <queue>
+#include <vector>
 #include <functional>
 
 // sockets imports
@@ -49,6 +50,10 @@ namespace Network {
         const bool& serverRunning;
         std::function<void(id_t)> onDisconnect;
 
+        void send(const char* buffer, const int size) const;
+        void send(const std::vector<std::byte>& buffer) const;
+        [[nodiscard]] std::vector<std::byte> recv(const int size) const;
+
     public:
         void handle() const;
         [[nodiscard]] const id_t& getId() const;
@@ -66,7 +71,7 @@ namespace Network {
         public:
             virtual void add(Client* client) = 0;
             virtual const Client& get(id_t id) const = 0;
-            virtual const int getCount() const = 0;
+            virtual const size_t getCount() const = 0;
             virtual void remove(id_t id) = 0;
             virtual ~ClientContainer() = default;
         };
@@ -84,7 +89,7 @@ namespace Network {
                 ~BSTClientNode();
             };
 
-            int count = 0;
+            size_t count = 0;
             BSTClientNode* root = nullptr;
 
             const Client& get(BSTClientNode* current, const id_t& id) const;
@@ -95,7 +100,7 @@ namespace Network {
 
             void add(Client* client) override;
             [[nodiscard]] const Client& get(id_t id) const override;
-            const int getCount() const override;
+            const size_t getCount() const override;
             void remove(id_t id) override;
 
             struct Iterator {
@@ -137,7 +142,10 @@ namespace Network {
         std::unique_ptr<Container::ClientContainer> clientContainer;
         std::mutex containerMutex;
 
-        // queue where client removals are handled
+        /**
+         * for handling client disconnects, I managed that using a different
+         * thread might be a better approach.
+         */
         std::queue<id_t> removals;
         std::thread removeThread;
         void removeHandle();
@@ -145,7 +153,7 @@ namespace Network {
     public:
         Server();
         ~Server();
-        void run();
+        void run(); // listens to new connections
     };
 } // Network
 

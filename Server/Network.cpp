@@ -1,8 +1,8 @@
 #include <stdexcept>
-#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <utility>
+#include <bit>
 #include "Network.h"
 #include "Config.h"
 
@@ -141,20 +141,50 @@ namespace Network {
 #endif
     }
 
+    void Client::send(const char* buffer, const int size) const {
+        int total = 0;
+        while (total < size) {
+            int sent = ::send(sock,buffer + total,size - total,0);
+            if (sent < 0)
+                throw std::runtime_error("Sending data failed");
+            total += sent;
+        }
+    }
+
+    void Client::send(const std::vector<std::byte> &buffer) const {
+        send(
+                reinterpret_cast<const char*>(buffer.data()),
+                static_cast<int>(buffer.size())
+                );
+    }
+
+    std::vector<std::byte> Client::recv(const int size) const {
+        std::vector<std::byte> buffer(size, std::byte(0));
+        int total = 0;
+        while (total < size) {
+            int received = ::recv(
+                    sock,
+                    reinterpret_cast<char*>(buffer.data() + total),
+                    size - total,
+                    0
+                    );
+            if (received == 0)
+                return {};
+            else if (received < 0)
+                throw std::runtime_error("Failed to read");
+            total += received;
+        }
+        return buffer;
+    }
+
     void Client::handle() const {
-        std::cout << "new client connected\n";
-        char buffer[1024];
-        int result;
         while (serverRunning) {
-            result = recv(sock, buffer, 1024, 0);
-            if (result == 0) {
-                std::cout << "client disconnected\n";
+            std::vector<std::byte> buffer = recv(13);
+            if (buffer.size() == 0)
                 break;
-            } else if (SOCKET_INVALID(result))
-                throw std::runtime_error("Error on reading data from a client");
-            if (SOCKET_INVALID(send(sock, "hello", 6, 0)))
-                throw std::runtime_error("Error on sending data to a client");
-            std::cout << buffer << '\n';
+            buffer.push_back(std::byte(0));
+            std::cout << reinterpret_cast<unsigned char*>(buffer.data()) << '\n';
+            send("hello", 6);
         }
 
         onDisconnect(id);
@@ -235,7 +265,7 @@ namespace Network {
             return get(root, id);
         }
 
-        const int BSTClientContainer::getCount() const {
+        const size_t BSTClientContainer::getCount() const {
             return count;
         }
 
