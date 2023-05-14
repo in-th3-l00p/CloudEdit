@@ -1,15 +1,8 @@
 #include "Application.h"
 
-Application::Application() {
-
-}
-
-Application::~Application() {
-
-}
+Application::Application() = default;
+Application::~Application() = default;
 
 void Application::run() {
-    while (running) {
-
-    }
+    server.run();
 }

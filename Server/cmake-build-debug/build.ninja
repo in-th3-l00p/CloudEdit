@@ -51,19 +51,19 @@ build cmake_object_order_depends_target_Server: phony || CMakeFiles/Server.dir
 
 build CMakeFiles/Server.dir/main.cpp.obj: CXX_COMPILER__Server_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/main.cpp || cmake_object_order_depends_target_Server
   DEP_FILE = CMakeFiles\Server.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
   OBJECT_DIR = CMakeFiles\Server.dir
   OBJECT_FILE_DIR = CMakeFiles\Server.dir
 
 build CMakeFiles/Server.dir/Application.cpp.obj: CXX_COMPILER__Server_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/Application.cpp || cmake_object_order_depends_target_Server
   DEP_FILE = CMakeFiles\Server.dir\Application.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
   OBJECT_DIR = CMakeFiles\Server.dir
   OBJECT_FILE_DIR = CMakeFiles\Server.dir
 
-build CMakeFiles/Server.dir/Server.cpp.obj: CXX_COMPILER__Server_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/Server.cpp || cmake_object_order_depends_target_Server
-  DEP_FILE = CMakeFiles\Server.dir\Server.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+build CMakeFiles/Server.dir/Network.cpp.obj: CXX_COMPILER__Server_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/Network.cpp || cmake_object_order_depends_target_Server
+  DEP_FILE = CMakeFiles\Server.dir\Network.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
   OBJECT_DIR = CMakeFiles\Server.dir
   OBJECT_FILE_DIR = CMakeFiles\Server.dir
 
@@ -75,9 +75,9 @@ build CMakeFiles/Server.dir/Server.cpp.obj: CXX_COMPILER__Server_Debug C$:/Users
 #############################################
 # Link the executable Server.exe
 
-build Server.exe: CXX_EXECUTABLE_LINKER__Server_Debug CMakeFiles/Server.dir/main.cpp.obj CMakeFiles/Server.dir/Application.cpp.obj CMakeFiles/Server.dir/Server.cpp.obj
+build Server.exe: CXX_EXECUTABLE_LINKER__Server_Debug CMakeFiles/Server.dir/main.cpp.obj CMakeFiles/Server.dir/Application.cpp.obj CMakeFiles/Server.dir/Network.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Server.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -108,10 +108,535 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tisca/Desktop/CloudEdit/Server/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target unit
+
+
+#############################################
+# Order-only phony target for unit
+
+build cmake_object_order_depends_target_unit: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build unit/CMakeFiles/unit.dir/ClientContainerTest.cpp.obj: CXX_COMPILER__unit_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/unit/ClientContainerTest.cpp || cmake_object_order_depends_target_unit
+  DEP_FILE = unit\CMakeFiles\unit.dir\ClientContainerTest.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/.. -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\CMakeFiles\unit.dir
+  OBJECT_FILE_DIR = unit\CMakeFiles\unit.dir
+
+build unit/CMakeFiles/unit.dir/__/Application.cpp.obj: CXX_COMPILER__unit_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/Application.cpp || cmake_object_order_depends_target_unit
+  DEP_FILE = unit\CMakeFiles\unit.dir\__\Application.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/.. -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\CMakeFiles\unit.dir
+  OBJECT_FILE_DIR = unit\CMakeFiles\unit.dir\__
+
+build unit/CMakeFiles/unit.dir/__/Network.cpp.obj: CXX_COMPILER__unit_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/Network.cpp || cmake_object_order_depends_target_unit
+  DEP_FILE = unit\CMakeFiles\unit.dir\__\Network.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/.. -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\CMakeFiles\unit.dir
+  OBJECT_FILE_DIR = unit\CMakeFiles\unit.dir\__
+
+build unit/CMakeFiles/unit.dir/ClientTest.cpp.obj: CXX_COMPILER__unit_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/unit/ClientTest.cpp || cmake_object_order_depends_target_unit
+  DEP_FILE = unit\CMakeFiles\unit.dir\ClientTest.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  INCLUDES = -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/.. -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\CMakeFiles\unit.dir
+  OBJECT_FILE_DIR = unit\CMakeFiles\unit.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target unit
+
+
+#############################################
+# Link the executable unit\unit.exe
+
+build unit/unit.exe: CXX_EXECUTABLE_LINKER__unit_Debug unit/CMakeFiles/unit.dir/ClientContainerTest.cpp.obj unit/CMakeFiles/unit.dir/__/Application.cpp.obj unit/CMakeFiles/unit.dir/__/Network.cpp.obj unit/CMakeFiles/unit.dir/ClientTest.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  -lws2_32  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = unit\CMakeFiles\unit.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = unit\unit.exe
+  TARGET_IMPLIB = unit\libunit.dll.a
+  TARGET_PDB = unit.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build unit/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unit/edit_cache: phony unit/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unit/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\tisca\Desktop\CloudEdit\Server -BC:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unit/rebuild_cache: phony unit/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build unit/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build unit/CMakeFiles/install.util: CUSTOM_COMMAND unit/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build unit/install: phony unit/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build unit/CMakeFiles/install/local.util: CUSTOM_COMMAND unit/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build unit/install/local: phony unit/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build unit/CMakeFiles/install/strip.util: CUSTOM_COMMAND unit/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build unit/install/strip: phony unit/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tisca/Desktop/CloudEdit/Server/unit/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build unit/lib/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unit/lib/edit_cache: phony unit/lib/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unit/lib/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\tisca\Desktop\CloudEdit\Server -BC:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unit/lib/rebuild_cache: phony unit/lib/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build unit/lib/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build unit/lib/CMakeFiles/install.util: CUSTOM_COMMAND unit/lib/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build unit/lib/install: phony unit/lib/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build unit/lib/CMakeFiles/install/local.util: CUSTOM_COMMAND unit/lib/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build unit/lib/install/local: phony unit/lib/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build unit/lib/CMakeFiles/install/strip.util: CUSTOM_COMMAND unit/lib/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build unit/lib/install/strip: phony unit/lib/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build unit/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = unit\lib\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/include -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\lib\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = unit\lib\googlemock\CMakeFiles\gmock.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib\libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug unit/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = unit\lib\googlemock\CMakeFiles\gmock.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build unit/lib/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = unit\lib\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\lib\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = unit\lib\googlemock\CMakeFiles\gmock_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib\libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug unit/lib/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = unit\lib\googlemock\CMakeFiles\gmock_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build unit/lib/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googlemock && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unit/lib/googlemock/edit_cache: phony unit/lib/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unit/lib/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googlemock && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\tisca\Desktop\CloudEdit\Server -BC:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unit/lib/googlemock/rebuild_cache: phony unit/lib/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build unit/lib/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build unit/lib/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND unit/lib/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googlemock && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build unit/lib/googlemock/install: phony unit/lib/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build unit/lib/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND unit/lib/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googlemock && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build unit/lib/googlemock/install/local: phony unit/lib/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build unit/lib/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND unit/lib/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googlemock && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build unit/lib/googlemock/install/strip: phony unit/lib/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || unit/lib/googletest/CMakeFiles/gtest.dir
+
+build unit/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = unit\lib\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -IC:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\lib\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = unit\lib\googletest\CMakeFiles\gtest.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib\libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug unit/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = unit\lib\googletest\CMakeFiles\gtest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build unit/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_Debug C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = unit\lib\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/include -isystem C:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest
+  OBJECT_DIR = unit\lib\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = unit\lib\googletest\CMakeFiles\gtest_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib\libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug unit/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = unit\lib\googletest\CMakeFiles\gtest_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build unit/lib/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googletest && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unit/lib/googletest/edit_cache: phony unit/lib/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unit/lib/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googletest && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\tisca\Desktop\CloudEdit\Server -BC:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unit/lib/googletest/rebuild_cache: phony unit/lib/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build unit/lib/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build unit/lib/googletest/CMakeFiles/install.util: CUSTOM_COMMAND unit/lib/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googletest && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build unit/lib/googletest/install: phony unit/lib/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build unit/lib/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND unit/lib/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googletest && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build unit/lib/googletest/install/local: phony unit/lib/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build unit/lib/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND unit/lib/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tisca\Desktop\CloudEdit\Server\cmake-build-debug\unit\lib\googletest && C:\Users\tisca\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build unit/lib/googletest/install/strip: phony unit/lib/googletest/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
 build Server: phony Server.exe
+
+build gmock: phony lib/libgmock.a
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
+
+build unit: phony unit/unit.exe
+
+build unit.exe: phony unit/unit.exe
 
 # =============================================================================
 # Folder targets.
@@ -121,7 +646,35 @@ build Server: phony Server.exe
 #############################################
 # Folder: C:/Users/tisca/Desktop/CloudEdit/Server/cmake-build-debug
 
-build all: phony Server.exe
+build all: phony Server.exe unit/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tisca/Desktop/CloudEdit/Server/cmake-build-debug/unit
+
+build unit/all: phony unit/unit.exe unit/lib/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tisca/Desktop/CloudEdit/Server/cmake-build-debug/unit/lib
+
+build unit/lib/all: phony unit/lib/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tisca/Desktop/CloudEdit/Server/cmake-build-debug/unit/lib/googlemock
+
+build unit/lib/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a unit/lib/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tisca/Desktop/CloudEdit/Server/cmake-build-debug/unit/lib/googletest
+
+build unit/lib/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 # Built-in targets
@@ -130,14 +683,14 @@ build all: phony Server.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake C$:/Users/tisca/Desktop/CloudEdit/Server/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeDependentOption.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakePackageConfigHelpers.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPython.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPython/Support.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/GNUInstallDirs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/tisca/Desktop/CloudEdit/Server/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/cmake/gmock.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/cmake/gmock_main.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/Config.cmake.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/gtest.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/gtest_main.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake C$:/Users/tisca/Desktop/CloudEdit/Server/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
+build C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeDependentOption.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakePackageConfigHelpers.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPython.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/FindPython/Support.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/GNUInstallDirs.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake C$:/Users/tisca/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/tisca/Desktop/CloudEdit/Server/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/cmake/gmock.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googlemock/cmake/gmock_main.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/CMakeLists.txt C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/Config.cmake.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/gtest.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/gtest_main.pc.in C$:/Users/tisca/Desktop/CloudEdit/Server/unit/lib/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
 
 
 #############################################
