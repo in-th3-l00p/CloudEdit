@@ -1,0 +1,27 @@
+# ninja log v5
+1	89	7058366624424088	build.ninja	e56aa5c0e86b9e77
+1359	1509	7058365447263397	Application.exe	99d13c2a3f177dc0
+3	943	7058351522145379	CMakeFiles/Application.dir/main.cpp.obj	2314e241195132f9
+7	1235	7058336531414154	CMakeFiles/Application.dir/Window.cpp.obj	d8b6cef962ff6c56
+3	1359	7058365445786946	CMakeFiles/Application.dir/Application.cpp.obj	9bea999481e4699b
+7	1166	7058365443860381	CMakeFiles/Application.dir/Widgets.cpp.obj	c7507b0eeff5517b
+21	501	7058336524086839	CMakeFiles/Application.dir/Math.cpp.obj	1cab283e4481346f
+15	895	7058351521670269	CMakeFiles/Application.dir/EntitySystem.cpp.obj	60ed26808bfc5c1e
+19	238	7058366665060014	CMakeFiles/Application.dir/Math.cpp.obj	e2390fa05aeadab6
+6	755	7058366670236990	CMakeFiles/Application.dir/Window.cpp.obj	1c8207894544fb82
+15	1012	7058366672796278	CMakeFiles/Application.dir/EntitySystem.cpp.obj	a962e40af8c8c3f6
+3	1030	7058366672988197	CMakeFiles/Application.dir/main.cpp.obj	e0fe8f4b614e9291
+22	1151	7058366674187115	CMakeFiles/Application.dir/Widgets.cpp.obj	cce9fe0d5c02ab76
+11	1353	7058366676182839	CMakeFiles/Application.dir/Application.cpp.obj	aa3ee0fbb5cc820f
+1353	1484	7058366677492166	Application.exe	bbbe7923876a52a9
+6	978	7058376121525737	CMakeFiles/Application.dir/Widgets.cpp.obj	cce9fe0d5c02ab76
+7	1074	7058376302920212	CMakeFiles/Application.dir/Widgets.cpp.obj	cce9fe0d5c02ab76
+3	1332	7058376305490270	CMakeFiles/Application.dir/Application.cpp.obj	aa3ee0fbb5cc820f
+1332	1468	7058376306846366	Application.exe	bbbe7923876a52a9
+3	1162	7058376759946679	CMakeFiles/Application.dir/Application.cpp.obj	aa3ee0fbb5cc820f
+1162	1293	7058376761234268	Application.exe	bbbe7923876a52a9
+3	973	7058377256335584	CMakeFiles/Application.dir/Widgets.cpp.obj	cce9fe0d5c02ab76
+3	199	7058377622068708	Application.exe	bbbe7923876a52a9
+9	1598	7058378030156660	CMakeFiles/Application.dir/Widgets.cpp.obj	cce9fe0d5c02ab76
+4	1867	7058378032857783	CMakeFiles/Application.dir/Application.cpp.obj	aa3ee0fbb5cc820f
+1867	2013	7058378034288374	Application.exe	bbbe7923876a52a9
